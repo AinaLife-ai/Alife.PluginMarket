@@ -2,16 +2,17 @@
   "id": "Alife.Plugin.LanguageModelRouter",
   "name": "灵枢 - 实时切换语言模型/报错自动切换容灾",
   "author": "doro",
-  "description": "替换框架内置 OpenAILanguageModel，支持最多 4 组 API 渠道。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
-
-  "dependencies": {},
-
-  "environments": null,
-
+  "description": "替换框架内置 OpenAILanguageModel，支持动态数量的 API 渠道组（可自由增删）。一句话让 AI 切换渠道，遭遇 429/5xx 等错误自动容灾重试，可探测各渠道可用模型列表。",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {},
+    "pip": {}
+  },
   "tags": [
     "语言模型"
   ],
-
   "releases": {
     "1.0.0": {
       "date": "2026-07-04",
@@ -42,6 +43,31 @@
       "date": "2026-07-24",
       "note": "修复多桌宠实例共享渠道选择状态的 bug，改为每个桌宠独立维护渠道、容灾、思维链等设置",
       "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v1.0.5/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.0.0": {
+      "date": "2026-08-05",
+      "note": "适配 Alife 4.0.0 插件框架：ChatBehaviour + ChatStreamingAsync 重构、新增 manifest 依赖声明；新增 UI 拖动排序渠道组（拖到最上方即为主组），容灾按新顺序执行；渠道组数量可自由增删（最多 12 组，旧配置自动迁移），主组也支持折叠",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.0.1": {
+      "date": "2026-08-06",
+      "note": "修复严重问题：AI 回复未写入对话历史导致重开对话丢失内容（手动补写 ChatHistory，对齐官方机制）；非法 Endpoint 不再拖垮整个插件（跳过该组）；识别上游错误帧避免空回复；多模态 content 兼容加固",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.1/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.0.2": {
+      "date": "2026-08-11",
+      "note": "修复 Token 消耗统计为 0：流式收尾的 usage 帧（choices 为空数组）之前被直接跳过导致解析不到，现已正确解析 prompt_tokens/completion_tokens 并兼容 input_tokens/output_tokens 字段变体",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.0.2/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.1.0": {
+      "date": "2026-08-15",
+      "note": "①修复 Token 统计虚高：部分渠道（如硅基流动）流式多次携带 usage 导致框架重复累加显示百万级，现只取最后一次 usage 帧统一上报；②新增智能思考/非思考切换（独立开关）：对齐官方机制，默认非思考（更快更省 token），AI 需调用工具/群消息/监听等复杂任务自动切回思考；非思考模式显式发送 {\"thinking\":{\"type\":\"disabled\"}} 彻底关闭思维链，每组可自定义 ExtraBodyNotThinking；③稳定性修复：EnsureHttpClient 加锁防并发重复构建、非思考模式丢弃残留 reasoning、兼容 prompt_cache_hit_tokens 缓存统计、/models 拼接 EndsWith 判断、强制锁定索引指向未配置组时复位",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.1.0/Alife.Plugin.LanguageModelRouter.zip"
+    },
+    "4.1.1": {
+      "date": "2026-08-15",
+      "note": "新增\"忽略历史隐式功能占用\"开关：框架对历史中调用过工具的角色会永久占用思考标记（隐式功能激活中），导致智能切换退化为恒思考；开启后日常闲聊走非思考更省 token，AI 即将调用工具/函数出错时仍自动切回思考。同时移除冗余的\"默认思考模式\"开关（与关闭智能切换效果相同）",
+      "file": "https://github.com/L134283/Alife.Plugin.LanguageModelRouter/releases/download/LanguageModelRouter-v4.1.1/Alife.Plugin.LanguageModelRouter.zip"
     }
   }
 }
