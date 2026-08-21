@@ -41,8 +41,13 @@
     },
     "4.4.1": {
       "date": "2026-8-21",
-      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作，解决点歌A task was canceled)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段(raw_message缺失时拼接text/at)、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐YuYang.QQTools.QQToolsModule实际源码",
+      "note": "修复：1) 统一OneBot调用超时捕获(10s TaskCanceled→提示可能已生效/禁止重复操作，解决点歌A task was canceled)；2) 引用回复结构化reply失败自动回退CQ码；3) 实时消息捕获支持message数组段、同秒排序稳定(Seq)；4) 新增私聊戳一戳PokePrivateMember(friend_poke)；5) 幼央兼容检测ID对齐YuYang.QQTools.QQToolsModule实际源码",
       "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.1/Alife.QQEnhance_v4.4.1.zip"
+    },
+    "4.4.2": {
+      "date": "2026-8-21",
+      "note": "修复：合并转发(构造新转发)JSON容错——1) 节点id支持数字与数字字符串(此前仅数字，字符串id会静默走错分支)；2) JSON缺收尾括号自动补全(解决Expected depth to be zero)；3) 解析失败给出含正确示例的详细提示；4) 发送成功反馈节点数",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.4.2/Alife.QQEnhance_v4.4.2.zip"
     }
   }
 }
