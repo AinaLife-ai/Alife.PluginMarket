@@ -1,0 +1,30 @@
+{
+  "id": "Azuma.EmotionTTS.E5",
+  "name": "EmotionTTS.E5（情感语音）",
+  "author": "Sero-Forove",
+  "description": "本地 GPT-SoVITS 情感语音合成（E5 全新代际）：speak 自管 + emotion/ref 情感标签 + 整段曲线 DSP + 情感 ref 库 + 学习体系，修复上一代多项重大 bug 并重构学习机制。",
+  "tags": [
+    "语音模型",
+    "GPT-SoVITS",
+    "情感语音"
+  ],
+  "source": "https://github.com/Sero-Forove/Alife-EmotionTTS-E3",
+  "dependencies": {
+    "Alife.Function.Speech": "",
+    "Alife.Function.FunctionCaller": ""
+  },
+  "environments": {
+    "nuget": {
+      "NAudio": ">=2.3.0"
+    }
+  },
+  "releases": {
+    "5.1.0": {
+      "date": "2026-08-24",
+      "note": "E5 全新代际（重大重构与修复）：\n- 修复吞 ref 标签不执行的问题（Begin() 清空 OrderedParts 引用，ref 段在合成前被丢弃）\n- 修复 WebUI 内 URL 路径填写的错误引导（导致 DSP-LLM 从未被正确调用）\n- 修复 speak 标签内部套用复杂标签组合的实现\n- 修复打分格式与说话格式的提示词引导\n- 修复桌宠气泡联动问题\n- 新增 WebUI 首次使用教学引导\n- 修复 speak 内部标点的 0.1 字级对齐与 DSP 切段问题\n- 修复 DSP-LLM 偷懒、输出格式不正常的问题\n- 修复 daemon 服务不常驻的问题（严重）\n- 修复 DSP 曲线不正常运行的问题\n- 新增语音打断选项按钮（QQ 语音保留不被打断的特性）\n- 重构学习机制\n- 大部分提示词优化\n\n⚠️ 重要：从旧版（E1/E2/E3）升级到本版本的用户，请先用 WebUI 内按钮清理旧的工作表和备份表。",
+      "file": "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v5.1.0/Azuma.EmotionTTS.E5.zip",
+      "dependencies": null,
+      "environments": null
+    }
+  }
+}
