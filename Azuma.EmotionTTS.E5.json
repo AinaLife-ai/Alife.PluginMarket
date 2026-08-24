@@ -21,7 +21,7 @@
   "releases": {
     "4.5.3": {
       "date": "2026-08-24",
-      "note": "E5 全新代际，大幅简化机制：仅保留 speak 与 emotion desc 标签；移除曲线 DSP；移除工作表与历史表学习；改用旁路融合 LLM 对 GPT-SoVITS 进行语气与标点引导。并修复了 QQ 语音通道和语种切换的问题。\n\n版本号命名说明：4.5.3 —— 第一位「4」= 兼容 Alife 客户端 v4；第二位「5」= 代际代号 E5；第三位「3」= E5 内第 3 次修订。旧代际 E3 曾用 4.1.x（已下架）。",
+      "note": "E5 全新代际，大幅简化机制：仅保留 speak 与 emotion desc 标签；移除曲线 DSP；移除工作表与历史表学习；改用旁路融合 LLM 对 GPT-SoVITS 进行语气与标点引导。并修复了 QQ 语音通道和语种切换的问题。\n\n版本号命名说明：4.5.3 —— 第一位「4」= 兼容 Alife 客户端 v4；第二位「5」= 代际代号 E5；第三位「3」= E5 内第 3 次修订。\n\n历史版本说明（仓库内 Release tag，仅作存档，不影响商店安装）：v4.1.0 / v4.1.1 = 旧代际 E3（已下架）；v5.1.0 ~ v5.1.3 = E5 早期误将主版本号写成 5（超过客户端 v4，不兼容，已废弃，由本版 4.5.3 取代）。",
       "file": "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.3/Azuma.EmotionTTS.E5.zip",
       "dependencies": null,
       "environments": null
