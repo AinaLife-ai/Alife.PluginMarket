@@ -39,6 +39,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.5/Azuma.EmotionTTS.E5.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.5.6":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "新增自定义旁路 LLM 提示词功能。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.6/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
