@@ -46,6 +46,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.6/Azuma.EmotionTTS.E5.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.5.7":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "优化插件 WebUI 页面的说明和展示文本。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.7/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
