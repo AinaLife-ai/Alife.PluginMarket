@@ -32,6 +32,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.4/Azuma.EmotionTTS.E5.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.5.5":  {
+                                   "date":  "2026-08-25",
+                                   "note":  "新增异音色情感 ref 融合机制。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-EmotionTTS-E3/releases/download/v4.5.5/Azuma.EmotionTTS.E5.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
