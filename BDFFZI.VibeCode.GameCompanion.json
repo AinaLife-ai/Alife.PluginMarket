@@ -23,6 +23,11 @@
     }
   },
   "releases": {
+    "1.1.0": {
+      "date": "2026-8-27",
+      "note": "浮窗底部新增「打开配置目录」「刷新配置」按钮，「参数编辑」改名「编辑陪玩配置」；浮窗展开尺寸调整（更窄更高）；修复无陪玩配置文件夹时「定位配置文件」打不开的问题（启动陪玩自动创建配置目录）。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.1.0.zip"
+    },
     "1.0.0": {
       "date": "2026-8-26",
       "note": "首发。通用游戏陪玩系统：文本/颜色/语音三类采样器（内容/触发/开关），OCR 与屏幕取色，全屏只读覆盖层预览，防抖/过期/强制推送机制。可加入 Alife 官方群获取他人捏好的游戏陪玩配置。",
