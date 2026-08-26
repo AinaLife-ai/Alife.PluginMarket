@@ -1,0 +1,32 @@
+{
+  "id": "BDFFZI.VibeCode.GameCompanion",
+  "name": "游戏陪玩",
+  "author": "BDFFZI",
+  "description": "基于视觉与音频采集的通用游戏陪玩系统：为不同游戏配置数据采集目标（文本/颜色/语音），数据有效且有变化时实时感知并汇报给 AI。可加入 Alife 官方群获取他人捏好的游戏陪玩配置。",
+  "tags": [
+    "游戏陪玩",
+    "视觉采集",
+    "音频采集",
+    "OCR"
+  ],
+  "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.AIModelUtility": "",
+    "Alife.Function.Auditory": "",
+    "Alife.Function.Vision": "",
+    "Alife.Function.MessageFilter": ""
+  },
+  "environments": {
+    "nuget": {
+      "Microsoft.Windows.SDK.NET.Ref": ""
+    }
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-8-26",
+      "note": "首发。通用游戏陪玩系统：文本/颜色/语音三类采样器（内容/触发/开关），OCR 与屏幕取色，全屏只读覆盖层预览，防抖/过期/强制推送机制。可加入 Alife 官方群获取他人捏好的游戏陪玩配置。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.0.0.zip"
+    }
+  }
+}
