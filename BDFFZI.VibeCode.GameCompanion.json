@@ -23,6 +23,11 @@
     }
   },
   "releases": {
+    "1.3.1": {
+      "date": "2026-8-29",
+      "note": "修复启动后全屏捕获日志刷屏问题（移除每帧捕获的冗余日志）。",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.VibeCode.GameCompanion/1.3.1.zip"
+    },
     "1.3.0": {
       "date": "2026-8-29",
       "note": "迁移为官方插件（ID 改为 BDFFZI.VibeCode.GameCompanion）并大规模重构：新增采样器框架（Collector 抽象层 + [Collector] 特性自动注册 + 占位配置机制），统一音频服务（AudioService 共享录制），采样器支持前置条件与颜色比值；编辑器新增自定义物理分辨率转换、缺失采样器类型红色警告；修复文本采样器空文本正则处理。",
