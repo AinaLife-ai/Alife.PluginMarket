@@ -29,6 +29,13 @@
                                    "file":  "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.2/Azuma.NeteaseMusic.zip",
                                    "dependencies":  null,
                                    "environments":  null
+                               },
+                     "4.0.1":  {
+                                   "date":  "2026-09-04",
+                                   "note":  "修复持久登录、歌单管理和批量下载的问题。",
+                                   "file":  "https://github.com/Sero-Forove/Alife-NeteaseMusic/releases/download/v4.0.1/Azuma.NeteaseMusic.zip",
+                                   "dependencies":  null,
+                                   "environments":  null
                                }
                  }
 }
