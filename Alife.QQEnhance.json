@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.24": {
+      "date": "2026-9-13",
+      "note": "新增「公共签名服务自动兜底」（默认开）：协议端明确拒绝卡片时（典型如 LLBot 未配置 musicSignUrl 直接报错）自动改用公共签名服务重签为 json 段重发；成功即沿用（后续直接走签名通道、用户无感），失败只尝试一次后切回原通道（不会每次多等超时）；已自行配置签名地址的用户不受影响，可用开关关闭。新增「第三方ARK签名通道」（默认关、需 Token）：开启并填入 Token 后走第三方 ARK 签名服务（自建卡片、不依赖协议端签名），配置项内已写明获取方式（访问 apii.xianyuw.cn 注册→复制 API Key→填入 ARK服务Token），地址默认公共站可换自建，失败一次即记下并切回默认通道。通道优先级：第三方ARK（开启且有Token）→ 自建/公共签名服务 → 协议端原生 music 段（被拒时触发公共兜底）→ custom → record",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.24/Alife.QQEnhance_v4.9.24.zip"
+    },
     "4.9.23": {
       "date": "2026-9-13",
       "note": "新增 B站视频卡片：SendMusicCard platform=bilibili musicId=BV号（也认 b站/哔哩哔哩/bili 别名），默认开启可关闭，走 QQ 通用图文卡 news 自行构造，不依赖签名服务也不受协议端平台白名单限制，标题/UP主/封面自动从B站公开接口获取。提示冷却拆分为四项独立配置：戳一戳10 / 被赞10 / 被贴表情10 / 他人贴他人30（秒），旧「提示冷却时间」已废弃仅兼容保留。签名返回兜底补全 prompt/ver/view（缺失即补、已有值不覆盖、按 meta 推断 view），避免自建/第三方签名服务返回缺字段导致卡片不渲染。修正「音乐签名服务地址」描述：实测 ss.xingzhige.com 稳定可用，失败仅发生在网易云 VIP/版权受限歌曲并会自动降级；写明 NapCat 有内置默认签名服务不填也能发、LLBot 未配置 musicSignUrl 会直接报错必须填。卡片 JSON 改用宽松编码器（中文不转义）便于排查",
