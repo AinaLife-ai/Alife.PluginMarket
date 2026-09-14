@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.27": {
+      "date": "2026-9-14",
+      "note": "修复 ARK 报「缺少必要参数」：拼 URL 时若 ARK 服务地址里已带 query（如把 ?key=xxx 一起填进去）会拼出两个 ? 导致服务端只认第一个、url/song/singer/cover/jump/format 全丢；现剥掉已有 query 再拼接并兼容「key 直接填在地址里」。修复 ARK 卡片显示不完整/只能试听（套壳补全）：ARK 返回的卡缺 extra{appid,uin} 与 meta.music 的 appid/app_type/ctime/uin/tagIcon，QQ 侧可能不按官方应用卡片渲染；现优先取签名服务产出的完整卡作为模板（复用其 appid/uin/tagIcon）把 ARK 内容套进完整结构，无模板时用内置默认值+bot自身uin。修复音频直链失效导致只能试听：此前 audio 用的网易云 outer 外链已实际失效（实测 302 → music.163.com/404 返回 HTML 而非音频），现优先取真实直链（meting → music.126.net）并做可播校验（跟随重定向必须是 audio/* 且 >100KB）。B站 -412 风控缓解：先访问 bilibili.com 取真实 buvid3 cookie，命中 -412 时退避 1.5 秒自动重试一次。ARK 优先级保证：配置了 ARK 就一定先用 ARK",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.27/Alife.QQEnhance_v4.9.27.zip"
+    },
     "4.9.26": {
       "date": "2026-9-13",
       "note": "修复非网易云平台（QQ音乐/酷狗/酷我/咪咕）卡片用不了ARK与签名：1) 这些平台未解析歌曲信息导致发给ARK/签名的字段全空被当缺参拒绝，现解析歌名/歌手/封面/跳转；2) 签名走 {type,id} 形式而实测 ss.xingzhige.com 只支持网易云（qq 返回「关闭id解析功能」、kugou/kuwo/migu 直接500），现签名一律改用 custom 形式（各平台内容都能签成功）。修复 ARK 一次失败即永久禁用：此前任意失败都置 _arkBroken，导致非网易云字段不全这一次失败连累后续所有平台（连网易云也跳过ARK），现区分失败类型——服务不可用（连不上/超时/非JSON）才永久标记，业务失败只本次跳过。修复 B站卡片解析报错：原实现只看 data 是否存在，而B站失败时仍返回HTTP 200（如code=-400无data）真实原因被吞、风控返回HTML时解析抛异常，现先判 code 并给出可读提示（-400请求错误/-404视频不存在/-352触发风控）、解析单独容错并记录响应、补全请求头（UA/Referer/Accept/Accept-Language/Cookie）",
