@@ -15,6 +15,11 @@
     "Alife.Function.MessageFilter": ""
   },
   "releases": {
+    "4.9.28": {
+      "date": "2026-9-14",
+      "note": "新增 bot 样式自主权：开了 ARK 之后 bot 仍可自行决定卡片形式——不填 style 时按配置（配了 ARK 则 ARK 优先），显式传 style=custom/record/163 时按 bot 的选择发送（跳过 ARK）；函数描述同步说明。非网易云平台（QQ音乐/酷狗等）也支持 custom/record：此前被强制改回原生卡片，现只要该平台能解析出音频直链就允许使用，拿不到直链时按原生卡片发送。修复非网易云平台走 custom/record 分支时歌曲信息为空：根因是「平台信息解析」只写在 163 分支内、走其它分支时从不解析，导致 ARK/签名拿到空字段被拒（日志中「缺少必要参数」也有这一层原因），现改为分支前统一解析一次、各分支复用不重复请求",
+      "file": "https://github.com/AinaLife-ai/Alife.QQEnhance/releases/download/v4.9.28/Alife.QQEnhance_v4.9.28.zip"
+    },
     "4.9.27": {
       "date": "2026-9-14",
       "note": "修复 ARK 报「缺少必要参数」：拼 URL 时若 ARK 服务地址里已带 query（如把 ?key=xxx 一起填进去）会拼出两个 ? 导致服务端只认第一个、url/song/singer/cover/jump/format 全丢；现剥掉已有 query 再拼接并兼容「key 直接填在地址里」。修复 ARK 卡片显示不完整/只能试听（套壳补全）：ARK 返回的卡缺 extra{appid,uin} 与 meta.music 的 appid/app_type/ctime/uin/tagIcon，QQ 侧可能不按官方应用卡片渲染；现优先取签名服务产出的完整卡作为模板（复用其 appid/uin/tagIcon）把 ARK 内容套进完整结构，无模板时用内置默认值+bot自身uin。修复音频直链失效导致只能试听：此前 audio 用的网易云 outer 外链已实际失效（实测 302 → music.163.com/404 返回 HTML 而非音频），现优先取真实直链（meting → music.126.net）并做可播校验（跟随重定向必须是 audio/* 且 >100KB）。B站 -412 风控缓解：先访问 bilibili.com 取真实 buvid3 cookie，命中 -412 时退避 1.5 秒自动重试一次。ARK 优先级保证：配置了 ARK 就一定先用 ARK",
