@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.6.0": {
+      "date": "2026-9-28 19:50:41",
+      "note": "feat:置顶维持逻辑抽离为独立模块，增加图钉开关控制是否周期性维持置顶（默认开启）",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.DeskPet/4.6.0.zip"
+    },
     "4.5.0": {
       "date": "2026-9-27 23:43:48",
       "note": "feat:增加口型功能开关\nfeat:重置功能增加对模型自身缩放位置的重置",
