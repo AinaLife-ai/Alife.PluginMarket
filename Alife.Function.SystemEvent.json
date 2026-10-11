@@ -11,6 +11,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "4.2.3": {
+      "date": "2026-10-11 23:48:02",
+      "note": "fix:周期报点计时改用帧时间累加\nfix:默认更新间隔调回30秒",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.SystemEvent/4.2.3.zip"
+    },
     "4.2.2": {
       "date": "2026-10-11 23:15:21",
       "note": "fix:启动时推送闲时行动建议，周期报点引用该建议\nfix:调整默认更新间隔与提示词",
