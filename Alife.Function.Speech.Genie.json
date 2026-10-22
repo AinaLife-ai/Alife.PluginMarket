@@ -19,6 +19,11 @@
     }
   },
   "releases": {
+    "5.0.0": {
+      "date": "2026-10-23 01:08:34",
+      "note": "feat: 适配 Alife 5.0.0",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech.Genie/5.0.0.zip"
+    },
     "4.0.0": {
       "date": "2026-8-4",
       "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Speech.Genie/4.0.0.zip",
