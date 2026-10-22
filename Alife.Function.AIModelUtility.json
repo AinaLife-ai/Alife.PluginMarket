@@ -6,6 +6,7 @@
   "tags": [
     "官方"
   ],
+  "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
   "environments": {
     "pip": {

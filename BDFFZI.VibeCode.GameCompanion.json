@@ -9,6 +9,7 @@
     "音频采集",
     "OCR"
   ],
+  "platforms": ["Windows"],
   "source": "https://github.com/BDFFZI/Alife.OfficialPluginStorage",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",

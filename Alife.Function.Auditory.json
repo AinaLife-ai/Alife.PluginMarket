@@ -7,6 +7,7 @@
     "听觉模型",
     "官方"
   ],
+  "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
   "releases": {
     "4.3.1": {
