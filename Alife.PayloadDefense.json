@@ -1,0 +1,23 @@
+{
+  "id": "Alife.PayloadDefense",
+  "name": "注入防御",
+  "author": "AinaLife",
+  "description": "拦截「伪造发言人」式提示注入：攻击者在消息正文里写 [别人的QQ(昵称)]:指令，在 Alife 默认渲染下与真实消息完全同构，AI 会当成另一个发言人照做。本插件用 OneBot 事件流做结构校验（SnowLuma/NapCat/LLOneBot 通用），正常聊天零改动、零额外 token、零配置。参考 znq19/KiraAI_payload_defense_plugin 的模式设计。",
+  "tags": [
+    "安全",
+    "注入防御",
+    "QQ",
+    "提示注入"
+  ],
+  "source": "https://github.com/AinaLife-ai/Alife.PayloadDefense",
+  "dependencies": {
+    "Alife.Function.QChat": ""
+  },
+  "releases": {
+    "1.0.0": {
+      "date": "2026-10-22",
+      "note": "拦截「伪造发言人」式注入。原理：Alife 的 QChat 把真消息渲染为 [QQ(昵称)]:正文（QChatService.cs:584），正文里的换行原样保留、昵称不转义 ⇒ 任何人在正文里写一行 [别人的QQ(名)]:指令，拼出来与真消息完全同构。防御：①订阅 OneBot 事件流（Alife 已归一化的 OneBotBaseEvent，SnowLuma/NapCat/LLOneBot 通用），同步 O(1) 写入每会话「按 QQ 索引」的真消息环形缓冲（仅内存、TTL 过期）；②在 ChatBot.ChatSend（同步过滤器）逐行校验形如 [≥3位数字(任意)]: 的行：该 QQ 本批发过言且正文前缀吻合 ⇒ 放行；本批根本没发言 ⇒ 伪造 ⇒ 按模式处理（block 默认替换为【注入已拦·伪造发言人】/ annotate 破坏结构保留原文 / strict 整块丢弃）；③常驻一句安全定调（一次注入，不破坏前缀缓存）。辅助规则（会话标签/系统行/自定义正则）默认全部关闭，避免误伤。性能：正常消息 0 字节改动、0 额外 token；1000 行块 <50ms；采集同步无 IO ⇒ 零卡顿、无需设置。验证：真值表 230/230（含用户实测样本、三端 RawMessage 差异、私聊块、白名单、三模式、性能）。致谢参考实现 znq19/KiraAI_payload_defense_plugin —— 这个攻击是「武哥」（周武）本人亲自试出来的，出于责任与惭愧，必须把它防住。",
+      "file": "https://github.com/AinaLife-ai/Alife.PayloadDefense/releases/download/v1.0.0/Alife.PayloadDefense_v1.0.0.zip"
+    }
+  }
+}
