@@ -1,6 +1,6 @@
 {
   "id": "Alife.Function.Python",
-  "name": "脚本执行（已弃用）",
+  "name": "脚本执行",
   "author": "Alife官方",
   "description": "赋予AI执行Python脚本的能力，实现文件管理、设备控制、绘画、音乐等复杂自定义功能。",
   "tags": [
@@ -11,11 +11,6 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
-    "4.3.0": {
-      "date": "2026-10-23 11:08:50",
-      "note": "fix: 弃用接口改为抛出 NotSupportedException，不再正常返回",
-      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Python/4.3.0.zip"
-    },
     "4.1.0": {
       "date": "2026-9-26 19:54:17",
       "note": "feat:增加对并行功能的支持",
