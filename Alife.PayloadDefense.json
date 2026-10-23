@@ -14,6 +14,11 @@
     "Alife.Function.QChat": ""
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-10-23",
+      "note": "文档脱敏（仅文档变更，逻辑零改动）：README 与源码注释中的示例统一改为占位符（123456789(甲) / 987654321(乙) / 555555555(丙)），不再出现任何真实 QQ 号、群号、昵称或群名；示例文案一并中性化。致谢中「这个攻击是武哥本人试出来的」按要求保留。真值表仍 240/240。",
+      "file": "https://github.com/AinaLife-ai/Alife.PayloadDefense/releases/download/v5.0.1/Alife.PayloadDefense_v5.0.1.zip"
+    },
     "5.0.0": {
       "date": "2026-10-23",
       "note": "适配 Alife 5.0.0（对齐官方插件版本规范）：版本号跟随框架改为 5.0.0，并补 platforms 字段。5.0 兼容性逐项核对（205aed4）：消息渲染 BufferGroupMessage($\"{speaker}:{content}\") 未变；ChatBot.ChatSend / OneBotClient.EventReceived / OneBotProtocol / Interactor / ChatBehaviour 全部未变（OneBotClient.cs 与 OneBotProtocol.cs 与 4.x 文件级一致）；QChatService.oneBotClient 字段与 GroupStates 仍在。攻击面依旧存在：5.0 仍不解码 CQ 实体（&#91;/HtmlDecode 0 处）⇒ 实体解码仍然必需。验证：真值表 240/240。",
