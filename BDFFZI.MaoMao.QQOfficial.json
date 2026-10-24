@@ -1,6 +1,6 @@
 {
   "id": "BDFFZI.MaoMao.QQOfficial",
-  "name": "QQ官方机器人接入",
+  "name": "QQ官方机器人",
   "author": "BDFFZI",
   "description": "接 QQ 开放平台官方机器人 OpenAPI（q.qq.com 后台那套）：自取 access_token 并提前续期、自连 WebSocket 网关收事件，把 QQ 群/私聊消息按会话形状注入宿主、主 Agent 的回信再由本插件发回 QQ；46 个函数覆盖文本/markdown/按钮键盘/结构化卡片/富媒体与分片上传/素材图/流式打字机/撤回、群信息与成员与禁言与黑名单与入群审批与自动审批策略、身份通讯录(跨场景学昵称)、菜单与指令面板、频道查询、分享链接。目标 ID 为 32 位十六进制 openid，需自备 q.qq.com 机器人凭据。只依赖 Alife.Function.FunctionCaller，热编译无需 NuGet 包。",
   "tags": [
