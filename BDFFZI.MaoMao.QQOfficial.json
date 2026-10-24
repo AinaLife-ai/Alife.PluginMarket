@@ -19,6 +19,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-10-25 01:53:46",
+      "note": "chore: 模块名改'QQ官方机器人'、分类对齐'真央的小工具'，manifest版本对齐发布",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/BDFFZI.MaoMao.QQOfficial/5.0.1.zip"
+    },
     "5.0.0": {
       "date": "2026-10-25 01:32:41",
       "note": "feat: 团队自研 QQ 官方机器人接入，私聊/群聊收发已实机跑通；46 函数覆盖收发/富媒体/群管/审批/身份通讯录/菜单面板/频道",
