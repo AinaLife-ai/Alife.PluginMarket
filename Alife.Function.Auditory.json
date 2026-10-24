@@ -9,7 +9,16 @@
   ],
   "platforms": ["Windows", "Android"],
   "source": "https://github.com/BDFFZI/Alife",
+  "dependencies": {
+    "Alife.Function.FunctionCaller": "",
+    "Alife.Function.MessageFilter": ""
+  },
   "releases": {
+    "5.1.0": {
+      "date": "2026-10-24 19:19:47",
+      "note": "feat: 增加悬浮窗，可显示并控制系统声音、麦克风声音的接收状态\nfeat: 点按切换开关，长按临时开启、松手关闭\nrefactor: 模型接口迁移至本插件",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Auditory/5.1.0.zip"
+    },
     "5.0.0": {
       "date": "2026-10-23 01:08:34",
       "note": "feat: 适配 Alife 5.0.0",

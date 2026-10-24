@@ -12,6 +12,11 @@
     "Alife.Function.FunctionCaller": ""
   },
   "releases": {
+    "5.0.2": {
+      "date": "2026-10-24 19:19:47",
+      "note": "fix: 优化提示词并恢复隐射注入切换功能",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.SystemEvent/5.0.2.zip"
+    },
     "5.0.1": {
       "date": "2026-10-23 23:58:10",
       "note": "fix: 修复启动时卡住的问题",

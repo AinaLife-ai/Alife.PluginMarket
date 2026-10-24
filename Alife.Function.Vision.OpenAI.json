@@ -13,6 +13,11 @@
     "Alife.Function.Vision": ""
   },
   "releases": {
+    "5.0.1": {
+      "date": "2026-10-24 19:19:47",
+      "note": "refactor: 适配 IVisionModel 新位置，依赖 Vision",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Vision.OpenAI/5.0.1.zip"
+    },
     "5.0.0": {
       "date": "2026-10-23 01:08:34",
       "note": "feat: 适配 Alife 5.0.0",
