@@ -14,6 +14,11 @@
     "Alife.Function.QChat": ""
   },
   "releases": {
+    "5.0.9": {
+      "date": "2026-10-27",
+      "note": "修「旧真消息被误判」：去掉按个人最后发言时间的 300s TTL 清理，改为每会话最近 N 条环形缓冲；启动时回填 QChat PreMessageBuffer/MessageBuffer 与 ChatHistory（只取 user，跳过已标注伪造行）；启动宽限期默认 120s（无法验证的行只放行不标注）；客户端重建后自动重新订阅。验证：真值表 277/277（R49–R56）。",
+      "file": "https://github.com/AinaLife-ai/Alife.PayloadDefense/releases/download/v5.0.9/Alife.PayloadDefense_v5.0.9.zip"
+    },
     "5.0.8": {
       "date": "2026-10-26",
       "note": "媒体/文件全类型复核 + 收紧「媒体标记放行」：图片/语音/视频/文件/合并转发/表情/音乐全部不误判（R44–R46）；回复类未采集也放行；媒体类只允许已确认发言者的渲染差异放行，未验证的「媒体+指令」不再放行（修掉凭 [图片] 即可绕过的安全洞，R47）；纯媒体（无正文）放行；@ 不属于免验证放行。已确认发言者的新媒体/新内容不误报（R48）。验证：真值表 269/269。",
