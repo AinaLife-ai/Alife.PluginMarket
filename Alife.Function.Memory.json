@@ -10,7 +10,8 @@
   "source": "https://github.com/BDFFZI/Alife",
   "dependencies": {
     "Alife.Function.FunctionCaller": "",
-    "Alife.Function.AIModelUtility": ""
+    "Alife.Function.MessageFilter": "",
+    "Alife.Function.TokenStatistics": ""
   },
   "environments": {
     "nuget": {
@@ -23,6 +24,11 @@
     }
   },
   "releases": {
+    "5.2.0": {
+      "date": "2026-11-1 00:33:47",
+      "note": "feat: 适配 Alife 5.2.0 黑夜模式，界面统一使用 --alife-* 主题令牌\nfix: 更换使用新的 token 接口\nfix: 提高默认压缩句数和警告线阈值",
+      "file": "https://github.com/BDFFZI/Alife.OfficialPluginStorage/raw/refs/heads/main/Alife.Function.Memory/5.2.0.zip"
+    },
     "5.0.0": {
       "date": "2026-10-23 01:08:34",
       "note": "feat: 适配 Alife 5.0.0",
